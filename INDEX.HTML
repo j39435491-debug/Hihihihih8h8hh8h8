@@ -104,4 +104,46 @@ footer {
   <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=1200" />
   <div class="text-box">
     <div class="title">핵심 활동: 생물 밟지 않기</div>
-    <div class="desc">자연 속 작은 생물들을 피해서 이동하는 미니 게임. 생태계 균형을 지키는 행동
+    <div class="desc">자연 속 작은 생물들을 피해서 이동하는 미니 게임. 생태계 균형을 지키는 행동을 직접 체험할 수 있어요.</div>
+  </div>
+</div>
+
+<!-- 게임 화면 -->
+<div class="block">
+  <div class="game-screen" id="game">게임 시작 (스크롤 시 자동 표시)</div>
+</div>
+
+<!-- 뉴스 -->
+<div class="block">
+  <div class="text-box">
+    <div class="title">환경 뉴스</div>
+    <div class="desc">· 멸종위기 곤충 보호 활동이 세계적으로 확대 중<br>· 학교 기반 생태교육 프로젝트 우수사례 발표</div>
+  </div>
+</div>
+
+<!-- 스토리 -->
+<div class="block">
+  <div class="text-box">
+    <div class="title">EcoStep 제작 스토리</div>
+    <div class="desc">고등학생 4명이 로드킬 문제와 도시 생태계 붕괴를 보고 직접 만든 프로젝트입니다. 작은 움직임이 큰 변화를 만든다는 믿음으로 개발되었습니다.</div>
+  </div>
+</div>
+
+<!-- 후원 문의 -->
+<div class="block">
+  <div class="text-box">
+    <div class="title">후원 문의</div>
+    <div class="desc">환경 교육 및 게임 업데이트를 위해 후원을 받고 있습니다.<br><br>📧 ecostep.team@gmail.com</div>
+  </div>
+</div>
+
+  </section>  <footer>© EcoStep Project</footer>  <script>
+    const gameScreen = document.getElementById("game");
+    window.addEventListener("scroll", () => {
+      const rect = gameScreen.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        gameScreen.textContent = "🐞 생물을 피해 이동하세요!";
+      }
+    });
+  </script></body>
+</html>
